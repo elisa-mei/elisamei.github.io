@@ -1,0 +1,187 @@
+{
+  "type" : "FeatureCollection", 
+  "features" : [
+    {
+      "type" : "Feature", 
+      "id" : 187, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          120.756006, -1.386657
+        ]
+      }, 
+      "properties" : {
+        "Nama" : "Rumkit Tk. IV/dr. Yanto Poso", 
+        "Provinsi" : "Sulawesi Tengah", 
+        "Alamat" : "Kasintuwu, Poso Kota Utara, Kabupaten Poso, Sulawesi Tengah 94611", 
+        "Telepon" : null, 
+        "Jumlah_Tenaga_Medis" : null, 
+        "Jumlah_APD" : null, 
+        "Ruang_Isolasi_Biasa" : null, 
+        "Ruang_Isolasi_Tekanan" : null, 
+        "Ruang_Isolasi_ICU" : null, 
+        "Keterangan" : "RS Rujukan TNI", 
+        "X" : 120.756006, 
+        "Y" : -1.386657, 
+        "ObjectId" : 187
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 188, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.886082, -0.89716399999999
+        ]
+      }, 
+      "properties" : {
+        "Nama" : "Rumkit Tk. IV/Palu", 
+        "Provinsi" : "Sulawesi Tengah", 
+        "Alamat" : "Jl. Sisingamangaraja No.4, Lolu Utara, Kec. Palu Sel., Kota Palu, Sulawesi Tengah 94118", 
+        "Telepon" : "(0451) 421575", 
+        "Jumlah_Tenaga_Medis" : null, 
+        "Jumlah_APD" : null, 
+        "Ruang_Isolasi_Biasa" : null, 
+        "Ruang_Isolasi_Tekanan" : null, 
+        "Ruang_Isolasi_ICU" : null, 
+        "Keterangan" : "RS Rujukan TNI", 
+        "X" : 119.886082, 
+        "Y" : -0.897164, 
+        "ObjectId" : 188
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 197, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.884046, -0.857813000000001
+        ]
+      }, 
+      "properties" : {
+        "Nama" : "RSU Undata Palu", 
+        "Provinsi" : "Sulawesi Tengah", 
+        "Alamat" : "Jl. R.E. Martadinata, Tondo, Kec. Mantikulore", 
+        "Telepon" : "0451 490 8020", 
+        "Jumlah_Tenaga_Medis" : null, 
+        "Jumlah_APD" : null, 
+        "Ruang_Isolasi_Biasa" : null, 
+        "Ruang_Isolasi_Tekanan" : null, 
+        "Ruang_Isolasi_ICU" : null, 
+        "Keterangan" : "RS Rujukan Kemenkes", 
+        "X" : 119.884046, 
+        "Y" : -0.857813, 
+        "ObjectId" : 197
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 234, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.867822, -0.889565999999997
+        ]
+      }, 
+      "properties" : {
+        "Nama" : "Tk III Palu", 
+        "Provinsi" : "Sulawesi Tengah", 
+        "Alamat" : "JL. DR. Suharso Lrg III, No.02, Besusu Barat, Palu Timur, Besusu Bar., Kec. Palu Tim., Kota Palu, Sulawesi Tengah 94118", 
+        "Telepon" : "(0451) 429714", 
+        "Jumlah_Tenaga_Medis" : null, 
+        "Jumlah_APD" : null, 
+        "Ruang_Isolasi_Biasa" : "1", 
+        "Ruang_Isolasi_Tekanan" : null, 
+        "Ruang_Isolasi_ICU" : null, 
+        "Keterangan" : "RS Rujukan Polri", 
+        "X" : 119.867822, 
+        "Y" : -0.889566, 
+        "ObjectId" : 234
+      }
+    },  
+    {
+      "type" : "Feature", 
+      "id" : 246, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          120.822775, 1.035911
+        ]
+      }, 
+      "properties" : {
+        "Nama" : "RS Mokopido Toli-Toli", 
+        "Provinsi" : "Sulawesi Tengah", 
+        "Alamat" : "Jl. Lanoni No.37 Kel Baru Kec.Baolan, kab.Toli-Toli", 
+        "Telepon" : "(0453) 21301", 
+        "Jumlah_Tenaga_Medis" : null, 
+        "Jumlah_APD" : null, 
+        "Ruang_Isolasi_Biasa" : null, 
+        "Ruang_Isolasi_Tekanan" : null, 
+        "Ruang_Isolasi_ICU" : null, 
+        "Keterangan" : "RS Rujukan Kemenkes", 
+        "X" : 120.822775, 
+        "Y" : 1.035911, 
+        "ObjectId" : 246
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 247, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.336856, -1.97236700000001
+        ]
+      }, 
+      "properties" : {
+        "Nama" : "RSU Kolonedale", 
+        "Provinsi" : "Sulawesi Tengah", 
+        "Alamat" : "Jl. W. Monginsidi 2, Kolonedale", 
+        "Telepon" : "0465 21010", 
+        "Jumlah_Tenaga_Medis" : null, 
+        "Jumlah_APD" : null, 
+        "Ruang_Isolasi_Biasa" : null, 
+        "Ruang_Isolasi_Tekanan" : null, 
+        "Ruang_Isolasi_ICU" : null, 
+        "Keterangan" : "RS Rujukan Kemenkes", 
+        "X" : 121.336856, 
+        "Y" : -1.972367, 
+        "ObjectId" : 247
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 248, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.849456, -0.899877999999996
+        ]
+      }, 
+      "properties" : {
+        "Nama" : "RSU Anutapura Palu", 
+        "Provinsi" : "Sulawesi Tengah", 
+        "Alamat" : "Jl. Kangkung No. 1 Palu", 
+        "Telepon" : "(0451) 460570", 
+        "Jumlah_Tenaga_Medis" : null, 
+        "Jumlah_APD" : null, 
+        "Ruang_Isolasi_Biasa" : null, 
+        "Ruang_Isolasi_Tekanan" : null, 
+        "Ruang_Isolasi_ICU" : null, 
+        "Keterangan" : "RS Rujukan Kemenkes", 
+        "X" : 119.849456, 
+        "Y" : -0.899878, 
+        "ObjectId" : 248
+      }
+    }
+  ]
+}
