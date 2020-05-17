@@ -1,0 +1,708 @@
+{
+  "type" : "FeatureCollection", 
+  "properties" : {
+    "exceededTransferLimit" : true
+  }, 
+  "features" : [
+    {
+      "type" : "Feature", 
+      "id" : 92, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.337125100043, -1.95474836964149
+        ]
+      }, 
+      "properties" : {
+        "FID" : 92, 
+        "kecamatan" : "PETASIA", 
+        "kabupaten" : "MOROWALI UTARA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.95474837, 
+        "lon" : 121.3371251, 
+        "kategori" : "high"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 108, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.962128399706, -1.83104638658142
+        ]
+      }, 
+      "properties" : {
+        "FID" : 108, 
+        "kecamatan" : "PIPIKORO", 
+        "kabupaten" : "SIGI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.831046387, 
+        "lon" : 119.9621284, 
+        "kategori" : "high"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 456, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.852347400312, -0.896208343040541
+        ]
+      }, 
+      "properties" : {
+        "FID" : 456, 
+        "kecamatan" : "PALU BARAT", 
+        "kabupaten" : "KOTA PALU", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.896208343, 
+        "lon" : 119.8523474, 
+        "kategori" : "high"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 476, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          120.793972399806, -1.86908183655748
+        ]
+      }, 
+      "properties" : {
+        "FID" : 476, 
+        "kecamatan" : "PAMONA TIMUR", 
+        "kabupaten" : "POSO", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.869081837, 
+        "lon" : 120.7939724, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 525, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          122.318483699763, -1.25398620999556
+        ]
+      }, 
+      "properties" : {
+        "FID" : 525, 
+        "kecamatan" : "BATUI SELATAN", 
+        "kabupaten" : "BANGGAI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.25398621, 
+        "lon" : 122.3184837, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 529, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          122.518350200402, -0.807951895563463
+        ]
+      }, 
+      "properties" : {
+        "FID" : 529, 
+        "kecamatan" : "LOBU", 
+        "kabupaten" : "BANGGAI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.807951896, 
+        "lon" : 122.5183502, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 530, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.240511299557, -1.99941602203177
+        ]
+      }, 
+      "properties" : {
+        "FID" : 530, 
+        "kecamatan" : "PETASIA BARAT", 
+        "kabupaten" : "MOROWALI UTARA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.999416022, 
+        "lon" : 121.2405113, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 531, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.774982100344, -0.353723430791661
+        ]
+      }, 
+      "properties" : {
+        "FID" : 531, 
+        "kecamatan" : "UNA UNA", 
+        "kabupaten" : "TOJO UNA-UNA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.353723431, 
+        "lon" : 121.7749821, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 547, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          120.292685599561, -1.67603198658685
+        ]
+      }, 
+      "properties" : {
+        "FID" : 547, 
+        "kecamatan" : "LORE TENGAH", 
+        "kabupaten" : "POSO", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.676031987, 
+        "lon" : 120.2926856, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 560, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.748184100216, -0.500672788018733
+        ]
+      }, 
+      "properties" : {
+        "FID" : 560, 
+        "kecamatan" : "BATUDAKA", 
+        "kabupaten" : "TOJO UNA-UNA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.500672788, 
+        "lon" : 121.7481841, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 574, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          122.873946000008, -0.873945900083186
+        ]
+      }, 
+      "properties" : {
+        "FID" : 574, 
+        "kecamatan" : "LUWUK UTARA", 
+        "kabupaten" : "BANGGAI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.8739459, 
+        "lon" : 122.873946, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 614, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          123.513650100372, -1.65225323809642
+        ]
+      }, 
+      "properties" : {
+        "FID" : 614, 
+        "kecamatan" : "BANGGAI TENGAH", 
+        "kabupaten" : "BANGGAI LAUT", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.652253238, 
+        "lon" : 123.5136501, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 648, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.811765699827, -0.945653642901277
+        ]
+      }, 
+      "properties" : {
+        "FID" : 648, 
+        "kecamatan" : "KINOVARO", 
+        "kabupaten" : "SIGI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.945653643, 
+        "lon" : 119.8117657, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 666, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          120.304166600209, -1.35000172929631
+        ]
+      }, 
+      "properties" : {
+        "FID" : 666, 
+        "kecamatan" : "LORE UTARA", 
+        "kabupaten" : "POSO", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.350001729, 
+        "lon" : 120.3041666, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 691, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          120.998056499608, -1.79717208262548
+        ]
+      }, 
+      "properties" : {
+        "FID" : 691, 
+        "kecamatan" : "MORI UTARA", 
+        "kabupaten" : "MOROWALI UTARA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.797172083, 
+        "lon" : 120.9980565, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 723, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          122.254232999553, -3.03109757988938
+        ]
+      }, 
+      "properties" : {
+        "FID" : 723, 
+        "kecamatan" : "BUNGKU PESISIR", 
+        "kabupaten" : "MOROWALI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -3.03109758, 
+        "lon" : 122.254233, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 741, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.30205330022, -2.29193948421977
+        ]
+      }, 
+      "properties" : {
+        "FID" : 741, 
+        "kecamatan" : "LEMBO RAYA", 
+        "kabupaten" : "MOROWALI UTARA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -2.291939484, 
+        "lon" : 121.3020533, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 759, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.453163000372, -2.11759985944593
+        ]
+      }, 
+      "properties" : {
+        "FID" : 759, 
+        "kecamatan" : "PETASIA TIMUR", 
+        "kabupaten" : "MOROWALI UTARA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -2.117599859, 
+        "lon" : 121.453163, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 791, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.867468999595, -1.01403105588849
+        ]
+      }, 
+      "properties" : {
+        "FID" : 791, 
+        "kecamatan" : "DOLO", 
+        "kabupaten" : "SIGI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.014031056, 
+        "lon" : 119.867469, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 883, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.862699799956, -2.57213075812791
+        ]
+      }, 
+      "properties" : {
+        "FID" : 883, 
+        "kecamatan" : "BUNGKU TENGAH", 
+        "kabupaten" : "MOROWALI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -2.572130758, 
+        "lon" : 121.8626998, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 903, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.626162099701, -1.29945087575726
+        ]
+      }, 
+      "properties" : {
+        "FID" : 903, 
+        "kecamatan" : "RIO PAKAVA", 
+        "kabupaten" : "DONGGALA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.299450876, 
+        "lon" : 119.6261621, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 906, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.892289000237, -0.691391138390259
+        ]
+      }, 
+      "properties" : {
+        "FID" : 906, 
+        "kecamatan" : "TAWAELI", 
+        "kabupaten" : "KOTA PALU", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.691391138, 
+        "lon" : 119.892289, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 940, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          120.675724900284, 0.884553369642333
+        ]
+      }, 
+      "properties" : {
+        "FID" : 940, 
+        "kecamatan" : "OGODEIDE", 
+        "kabupaten" : "TOLITOLI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : 0.88455337, 
+        "lon" : 120.6757249, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 954, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.607668500101, -0.917502619949914
+        ]
+      }, 
+      "properties" : {
+        "FID" : 954, 
+        "kecamatan" : "RATOLINDO", 
+        "kabupaten" : "TOJO UNA-UNA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.91750262, 
+        "lon" : 121.6076685, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 991, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.810051300227, -1.09935498774246
+        ]
+      }, 
+      "properties" : {
+        "FID" : 991, 
+        "kecamatan" : "AMPANA TETE", 
+        "kabupaten" : "TOJO UNA-UNA", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.099354988, 
+        "lon" : 121.8100513, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1007, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          120.516707900249, -1.93177718806675
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1007, 
+        "kecamatan" : "PAMONA BARAT", 
+        "kabupaten" : "POSO", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.931777188, 
+        "lon" : 120.5167079, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1036, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          123.188242200018, -0.805393628313254
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1036, 
+        "kecamatan" : "MASAMA", 
+        "kabupaten" : "BANGGAI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.805393628, 
+        "lon" : 123.1882422, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1162, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.874608200208, -0.89039237430859
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1162, 
+        "kecamatan" : "PALU TIMUR", 
+        "kabupaten" : "KOTA PALU", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.890392374, 
+        "lon" : 119.8746082, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1174, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.197445200336, 1.17309780481986
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1174, 
+        "kecamatan" : "LAKEA", 
+        "kabupaten" : "BUOL", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : 1.173097805, 
+        "lon" : 121.1974452, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1261, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.900087799612, -0.922681365952258
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1261, 
+        "kecamatan" : "PALU SELATAN", 
+        "kabupaten" : "KOTA PALU", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.922681366, 
+        "lon" : 119.9000878, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1489, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.769684699589, -2.38495817737794
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1489, 
+        "kecamatan" : "BUNGKU BARAT", 
+        "kabupaten" : "MOROWALI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -2.384958177, 
+        "lon" : 121.7696847, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1686, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          121.966296099585, -2.87998841393409
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1686, 
+        "kecamatan" : "BAHODOPI", 
+        "kabupaten" : "MOROWALI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -2.879988414, 
+        "lon" : 121.9662961, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1840, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.970831800147, -0.992168249165331
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1840, 
+        "kecamatan" : "SIGI BIROMARU", 
+        "kabupaten" : "SIGI", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.992168249, 
+        "lon" : 119.9708318, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1916, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          119.954646200362, -0.855059361000656
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1916, 
+        "kecamatan" : "MANTIKULORE", 
+        "kabupaten" : "KOTA PALU", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -0.855059361, 
+        "lon" : 119.9546462, 
+        "kategori" : "medium"
+      }
+    }, 
+    {
+      "type" : "Feature", 
+      "id" : 1970, 
+      "geometry" : 
+      {
+        "type" : "Point", 
+        "coordinates" : [
+          120.797659899884, -1.3699414005751
+        ]
+      }, 
+      "properties" : {
+        "FID" : 1970, 
+        "kecamatan" : "POSO KOTA UTARA", 
+        "kabupaten" : "POSO", 
+        "provinsi" : "SULAWESI TENGAH", 
+        "lat" : -1.369941401, 
+        "lon" : 120.7976599, 
+        "kategori" : "medium"
+      }
+    }
+  ]
+}
