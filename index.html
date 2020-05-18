@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Covid19 di Rumah Sakit Provinsi Sulawesi Tengah</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+ 
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpc2FtYWl5ZW50aSIsImEiOiJjazlsajdwYTkwMTYyM2ttcWs1OHdvcms3In0.dOSip7M0YdWLe3UUDVeTRg';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [117.96473, -2.48345],
+zoom: 3.18
+});
+ 
+map.on('load', function() {
+// Add a new source from our GeoJSON data and
+// set the 'cluster' option to true. GL-JS will
+// add the point_count property to your source data.
+map.addSource('rawan', {
+type: 'geojson',
+// Point to GeoJSON data. 
+// from https://bnpb-inacovid19.hub.arcgis.com/datasets/data-harian-kasus-per-provinsi-covid-19-indonesia.
+data:
+'https://opendata.arcgis.com/datasets/0c0f4558f1e548b68a1c82112744bad3_0.geojson',
+cluster: true,
+clusterMaxZoom: 14, // Max zoom to cluster points on
+clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+});
+ 
+map.addLayer({
+id: 'clusters',
+type: 'circle',
+source: 'rawan',
+filter: ['has', 'point_count'],
+paint: {
+// Use step expressions (https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-step)
+// with three steps to implement three types of circles:
+//   * Blue, 10px circles when point count is less than 3
+//   * Yellow, 20px circles when point count is between 3 and 10
+//   * Pink, 30px circles when point count is greater than or equal to 750
+'circle-color': [
+'step',
+['get', 'point_count'],
+'#51bbd6',
+3,
+'#f1f075',
+10,
+'#f28cb1'
+],
+'circle-radius': [
+'step',
+['get', 'point_count'],
+10,
+3,
+20,
+10,
+30
+]
+}
+});
+ 
+map.addLayer({
+id: 'cluster-count',
+type: 'symbol',
+source: 'rawan',
+filter: ['has', 'point_count'],
+layout: {
+'text-field': '{point_count_abbreviated}',
+'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+'text-size': 12
+}
+});
+ 
+map.addLayer({
+id: 'unclustered-point',
+type: 'circle',
+source: 'rawan',
+filter: ['!', ['has', 'point_count']],
+paint: {
+'circle-color': '#11b4da',
+'circle-radius': 4,
+'circle-stroke-width': 1,
+'circle-stroke-color': '#fff'
+}
+});
+ 
+// inspect a cluster on click
+map.on('click', 'clusters', function(e) {
+var features = map.queryRenderedFeatures(e.point, {
+layers: ['clusters']
+});
+var clusterId = features[0].properties.cluster_id;
+map.getSource('rawan').getClusterExpansionZoom(
+clusterId,
+function(err, zoom) {
+if (err) return;
+ 
+map.easeTo({
+center: features[0].geometry.coordinates,
+zoom: zoom
+});
+}
+);
+});
+ 
+
+ 
+map.on('mouseenter', 'clusters', function() {
+map.getCanvas().style.cursor = 'pointer';
+});
+map.on('mouseleave', 'clusters', function() {
+map.getCanvas().style.cursor = '';
+});
+});
+</script>
+<style>
+.overlay {
+position: absolute;
+top: 10px;
+left: 10px;
+}
+ 
+.overlay button {
+font: 600 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+background-color: #3386c0;
+color: #fff;
+display: inline-block;
+margin: 0;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+border-radius: 3px;
+}
+ 
+.overlay button:hover {
+background-color: #4ea0da;
+}
+</style>
+<script
+src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"
+charset="utf-8"
+></script>
+ 
+<div id="map"></div>
+<div class="overlay">
+<button id="replay">Replay</button>
+</div>
+ 
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpc2FtYWl5ZW50aSIsImEiOiJjazlsajdwYTkwMTYyM2ttcWs1OHdvcms3In0.dOSip7M0YdWLe3UUDVeTRg'
+Docs
+Mapbox GL JS
+OverviewAPI Reference
+Search docs.mapbox.com
+Animate a point along a route
+Use Turf to smoothly animate a point along the distance of a line.
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Covid19 di Rumah Sakit Provinsi Sulawesi Tengah</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css" rel="stylesheet" />
+<style>
+	body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+.overlay {
+position: absolute;
+top: 10px;
+left: 10px;
+}
+ 
+.overlay button {
+font: 600 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+background-color: #3386c0;
+color: #fff;
+display: inline-block;
+margin: 0;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+border-radius: 3px;
+}
+ 
+.overlay button:hover {
+background-color: #4ea0da;
+}
+</style>
+<script
+src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.0/turf.min.js"
+charset="utf-8"
+></script>
+ 
+<div id="map"></div>
+<div class="overlay">
+<button id="replay">Replay</button>
+</div>
+ 
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpc2FtYWl5ZW50aSIsImEiOiJjazlsajdwYTkwMTYyM2ttcWs1OHdvcms3In0.dOSip7M0YdWLe3UUDVeTRg';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [117.96473, -2.48345],
+zoom: 3.18
+});
+ 
+// jakarta
+var origin = [106.65712, -6.12577];
+ 
+// palu
+var destination = [119.90628, -0.91846];
+ 
+// A simple line from origin to destination.
+var route = {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'geometry': {
+'type': 'LineString',
+'coordinates': [origin, destination]
+}
+}
+]
+};
+ 
+// A single point that animates along the route.
+// Coordinates are initially set to origin.
+var point = {
+'type': 'FeatureCollection',
+'features': [
+{
+'type': 'Feature',
+'properties': {},
+'geometry': {
+'type': 'Point',
+'coordinates': origin
+}
+}
+]
+};
+ 
+// Calculate the distance in kilometers between route start/end point.
+var lineDistance = turf.lineDistance(route.features[0], 'kilometers');
+ 
+var arc = [];
+ 
+// Number of steps to use in the arc and animation, more steps means
+// a smoother arc and animation, but too many steps will result in a
+// low frame rate
+var steps = 500;
+ 
+// Draw an arc between the `origin` & `destination` of the two points
+for (var i = 0; i < lineDistance; i += lineDistance / steps) {
+var segment = turf.along(route.features[0], i, 'kilometers');
+arc.push(segment.geometry.coordinates);
+}
+ 
+// Update the route with calculated arc coordinates
+route.features[0].geometry.coordinates = arc;
+ 
+// Used to increment the value of the point measurement against the route.
+var counter = 0;
+ 
+map.on('load', function() {
+// Add a source and layer displaying a point which will be animated in a circle.
+map.addSource('route', {
+'type': 'geojson',
+'data': route
+});
+ 
+map.addSource('point', {
+'type': 'geojson',
+'data': point
+});
+ 
+map.addLayer({
+'id': 'route',
+'source': 'route',
+'type': 'line',
+'paint': {
+'line-width': 2,
+'line-color': '#007cbf'
+}
+});
+ 
+map.addLayer({
+'id': 'point',
+'source': 'point',
+'type': 'symbol',
+'layout': {
+'icon-image': 'airport-15',
+'icon-rotate': ['get', 'bearing'],
+'icon-rotation-alignment': 'map',
+'icon-allow-overlap': true,
+'icon-ignore-placement': true
+}
+});
+ 
+function animate() {
+// Update point geometry to a new position based on counter denoting
+// the index to access the arc.
+point.features[0].geometry.coordinates =
+route.features[0].geometry.coordinates[counter];
+ 
+// Calculate the bearing to ensure the icon is rotated to match the route arc
+// The bearing is calculate between the current point and the next point, except
+// at the end of the arc use the previous point and the current point
+point.features[0].properties.bearing = turf.bearing(
+turf.point(
+route.features[0].geometry.coordinates[
+counter >= steps ? counter - 1 : counter
+]
+),
+turf.point(
+route.features[0].geometry.coordinates[
+counter >= steps ? counter : counter + 1
+]
+)
+);
+ 
+// Update the source with this new data.
+map.getSource('point').setData(point);
+ 
+// Request the next frame of animation so long the end has not been reached.
+if (counter < steps) {
+requestAnimationFrame(animate);
+}
+ 
+counter = counter + 1;
+}
+ 
+document.getElementById('replay').addEventListener('click', function() {
+// Set the coordinates of the original point back to origin
+point.features[0].geometry.coordinates = origin;
+ 
+// Update the source layer
+map.getSource('point').setData(point);
+ 
+// Reset the counter
+counter = 0;
+ 
+// Restart the animation.
+animate(counter);
+});
+ 
+// Start the animation.
+animate(counter);
+});
+</script>
+<style>
+#map {
+position: fixed;
+width: 80%;
+}
+#features {
+width: 20%;
+margin-left: 80%;
+font-family: "Comic Sans MS", cursive, sans-serif;
+overflow-y: scroll;
+background-color: #fafafa;
+}
+section {
+padding: 27px 50px;
+line-height: 27px;
+border-bottom: 1px solid #ddd;
+opacity: 0.25;
+font-size: 15px;
+}
+section.active {
+opacity: 1;
+}
+section:last-child {
+border-bottom: none;
+margin-bottom: 200px;
+}
+</style>
+ 
+<div id="map"></div>
+<div id="features">
+<section id="palu" class="active">
+<h3>Kota Palu</h3>
+<p align="justify">
+03 Maret 2020 <br>
+Pasien Covid-19 pertama tiba di Palu tanggal 3 Maret 2020 setelah melakukan perjalanan ke Jakarta sejak bulan Oktober 2019.
+</p>
+</section>
+<section id="anutap" class="active"> <br>
+<h3>RSU Anutapura</h3>
+<p align="justify">
+21 Maret 2020 <br>
+Pasien Covid-19 kedua kembali dari Jakarta dan melakukan pemeriksaan mandiri ke RSU Anutapura Palu. Pasien kedua tersebut kemudian melakukan isolasi mandiri.
+</p>
+</section>
+<section id="undata" class="active">
+<h3>RS Undata Palu</h3>
+<p align="justify">
+26 Maret 2020 <br>
+Pasien pertama tersebut dikonfirmasi positif corona yang di rawat dan diisolasi di RS Undata Palu.
+</p>
+</section>
+<section id="anutapu" class="active">
+<h3>RSU Anutapura</h3>
+<p align="justify">
+28 Maret 2020 <br>
+Pasien Covid-19 kedua tersebut dikonfirmasi positif corona dan di rawat di RSU Anutapura Palu.
+<br> PDP : 5 orang
+</p>
+</section>
+<section id="anutapura" class="active">
+<h3>RSU Anutapura</h3>
+<p align="justify">
+30 Maret 2020 <br>
+Pasien Covid-19 kedua tersebut dinyatakan meninggal dunia dan dimakamkan sesuai protokol penanganan jenazah Covid-19.
+</p>
+</section>
+<section id="labuang" class="active">
+<h3>RSU Labuang Baji</h3>
+<p align="justify">
+31 Maret 2020 <br>
+Pasien Covid-19 ketiga mempunyai ktp Palu, namun dirawat di RSU Labuang Baji, Makassar, Sulawesi Selatan.
+</p>
+</section>
+<section id="undat" class="active">
+<h3>RS Undata Palu</h3>
+<p align="justify">
+03 April 2020 <br>
+Pasien Covid-19 keempat dirawat di RS Undata Palu.4 PDP masih dalam proses lab. PDP lain dirawat di rumah sakit yang berbeda, berikut sebarannya :
+</p>
+</section>
+<section id="moko"class="active"><p>1 PDP RSU Mokopido</p><br><br><br><br></section>
+<section id="mada"class="active"><p>2 PDP RSD Madani</p><br><br><br><br></section>
+<section id="kolo"class="active">4 PDP RSUD Kolonae </p><br><br><br><br></section>
+<section id="kolo"class="active"><p></p><br><br><br><br></section>
+</div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZWxpc2FtYWl5ZW50aSIsImEiOiJjazlsajdwYTkwMTYyM2ttcWs1OHdvcms3In0.dOSip7M0YdWLe3UUDVeTRg';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [117.96473, -2.48345],
+zoom: 3.18,
+bearing:0,
+pitch: 0
+});
+ 
+var chapters = {
+'palu': {
+bearing: 0,
+center: [119.87116, -0.85604],
+zoom: 9.51,
+pitch: 0
+},
+'anutap': {
+center: [119.84829,-0.90027],
+bearing: 0,
+zoom: 16,
+pitch: 0
+},
+'undata': {
+center: [119.88411,-0.85783],
+bearing: 0,
+zoom: 16,
+pitch: 0
+},
+'anutapu': {
+center: [119.84829,-0.90027],
+bearing: 0,
+zoom: 16,
+pitch: 0
+},
+'anutapura': {
+center: [119.84829,-0.90027],
+bearing: 0,
+zoom: 16,
+pitch: 0
+},
+'labuang': {
+center: [119.41839,-5.16251],
+bearing: 0,
+zoom: 16,
+pitch: 0
+},
+'undat': {
+center: [119.88411,-0.85783],
+bearing: 0,
+zoom: 16,
+pitch: 0
+},
+'moko': {
+center: [120.8227769,1.0358794],
+bearing: 0,
+zoom: 16,
+pitch: 0
+},
+'mada': {
+center: [119.8685282,-0.7895214],
+bearing: 0,
+zoom: 16,
+pitch: 0
+},
+'kolo': {
+center: [121.3340653,-1.9724464],
+bearing: 0,
+zoom: 16,
+pitch: 0
+}
+};
+ 
+// On every scroll event, check which element is on screen
+window.onscroll = function() {
+var chapterNames = Object.keys(chapters);
+for (var i = 0; i < chapterNames.length; i++) {
+var chapterName = chapterNames[i];
+if (isElementOnScreen(chapterName)) {
+setActiveChapter(chapterName);
+break;
+}
+}
+};
+ 
+var activeChapterName = 'palu';
+function setActiveChapter(chapterName) {
+if (chapterName === activeChapterName) return;
+ 
+map.flyTo(chapters[chapterName]);
+ 
+document.getElementById(chapterName).setAttribute('class', 'active');
+document.getElementById(activeChapterName).setAttribute('class', '');
+ 
+activeChapterName = chapterName;
+}
+ 
+function isElementOnScreen(id) {
+var element = document.getElementById(id);
+var bounds = element.getBoundingClientRect();
+return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+</script>
+ 
+</body>
+</html>
